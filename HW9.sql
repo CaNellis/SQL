@@ -59,6 +59,7 @@ WHERE f.title LIKE 'Hunchback Impossible%';
 -- 6e. Using tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name:
 SELECT c.first_name, c.last_name, SUM(p.amount) as 'Total Amount Paid' FROM customer AS c 
 INNER JOIN payment AS p ON c.customer_id = p.customer_id GROUP BY c.last_name, c.first_name;
+
 -- ----------------- SECTION 7 --------------------
 -- 7a. in films table, use subqueries to display titles of movies starting with letters K and Q whose language is English.
 SELECT title FROM film AS f 
